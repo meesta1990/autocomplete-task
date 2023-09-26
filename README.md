@@ -13,8 +13,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## How to start the app:
 
-### `npm install`
-### `npm start`
+1. `npm install`
+2. `npm start`
 
 ## Mocked API call
 
