@@ -14,6 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Mocked API call
 
-For the purpose of the task I used a mocking webservice visitable at https://mocki.io/fake-json-api.
-If you put a response in the textarea, it generates an api to call which will return the response you set.
-The JSON array I've used is ./src/mockedOptions.json
+For the task, I utilized a mock web service accessible at https://mocki.io/fake-json-api.
+By inputting a response in the textarea, it generates an API call that will return the response you have configured.
+The JSON array I used can be found at ./src/mockedOptions.json.
