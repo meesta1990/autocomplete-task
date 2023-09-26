@@ -1,0 +1,82 @@
+.wrapper-autocomplete {
+    position: relative;
+    display: inline-block;
+}
+
+.wrapper-autocomplete input[type=text] {
+    padding: 12px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.wrapper-autocomplete .options-container {
+    position: absolute;
+    background: white;
+    color: var(--primary-color);
+    top: 100%;
+    left: 2px;
+    right: 2px;
+    margin-top: 5px;
+    padding: 0;
+    max-height: 300px;
+    transition: opacity 200ms ease-in-out;
+    pointer-events: none;
+    opacity: 0;
+    overflow: auto;
+}
+
+.wrapper-autocomplete .options-container.show {
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.wrapper-autocomplete .options-container .option {
+    padding: 6px;
+    border-bottom: 1px solid #68748a;
+    user-select: none;
+    display: block;
+}
+
+.wrapper-autocomplete .options-container .option.selected {
+    background: #68748a;
+    cursor: pointer;
+    color: white;
+}
+
+.wrapper-autocomplete .options-container .option.disabled {
+    pointer-events:none;
+    cursor: not-allowed;
+    color: #6c6c6c;
+}
+
+.wrapper-autocomplete .options-container .options-loader-backdrop,
+.wrapper-autocomplete .options-container .options-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 200ms ease-in-out;
+}
+
+.wrapper-autocomplete .options-container .options-loader-backdrop {
+    background: var(--primary-color);
+}
+
+.wrapper-autocomplete .options-container .options-loader-backdrop.show {
+    opacity: 0.3;
+}
+
+.wrapper-autocomplete .options-container .options-loader {
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper-autocomplete .options-container .options-loader.show {
+    opacity: 1;
+}
